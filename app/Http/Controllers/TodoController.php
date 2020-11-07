@@ -16,9 +16,19 @@ class TodoController extends Controller {
         $this->todo = $todo;
     }
 
+    public function show ($todo_id) {
+        $todo = $this->todo->find($todo_id);
+
+        // transform 1 to true in  is_completed key
+        $todo['is_completed'] = $todo['is_completed'] === '1' ? true : false;
+
+        return $todo;
+    }
+
     public function index () {
         return $this->todo->all();
     }
+
 
     public function store (Request $request) {
 
