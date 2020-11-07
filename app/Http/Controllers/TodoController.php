@@ -81,7 +81,6 @@ class TodoController extends Controller {
         // handling error if todo does not exist
         if(!isset($todo)) return ['error'=>'todo does not exist'];
 
-
         $todo->forceDelete();
 
         return;
