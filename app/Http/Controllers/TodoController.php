@@ -74,4 +74,16 @@ class TodoController extends Controller {
 
         return $todo;
     }
+
+    public function delete ($todo_id) {
+        $todo = $this->todo->find($todo_id);
+
+        // handling error if todo does not exist
+        if(!isset($todo)) return ['error'=>'todo does not exist'];
+
+
+        $todo->forceDelete();
+
+        return;
+    }
 }

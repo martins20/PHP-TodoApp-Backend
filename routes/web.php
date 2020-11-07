@@ -22,5 +22,6 @@ $router->group(['prefix' => 'todos'], function () use($router) {
     $router->get('/{todo_id}', 'TodoController@show');
     $router->post('/', 'TodoController@store');
     $router->put('/{todo_id}', 'TodoController@update');
+    $router->delete('/{todo_id}', 'TodoController@delete');
 });
 
