@@ -13,7 +13,6 @@
 |
 */
 
-
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
@@ -22,5 +21,6 @@ $router->group(['prefix' => 'todos'], function () use($router) {
     $router->get('/', 'TodoController@index');
     $router->get('/{todo_id}', 'TodoController@show');
     $router->post('/', 'TodoController@store');
+    $router->put('/{todo_id}', 'TodoController@update');
 });
 
