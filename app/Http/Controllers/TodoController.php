@@ -16,6 +16,10 @@ class TodoController extends Controller {
         $this->todo = $todo;
     }
 
+    public function index () {
+        return $this->todo->all();
+    }
+
     public function store (Request $request) {
 
         // Get todo_name of all request types
