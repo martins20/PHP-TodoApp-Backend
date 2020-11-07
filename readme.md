@@ -46,14 +46,12 @@ $ touch database.sqlite
 $ php artisan migrate:install
 
 $ php artisan migrate
-
 ```
 
 **:five: Connect and create all table in database file.**
 
 ```
 $ php -S localhost:3333 -t public
-
 ```
 
 ## :telescope: Endpoints
