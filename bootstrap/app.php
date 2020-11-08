@@ -61,6 +61,11 @@ $app->singleton(
 
 $app->configure('app');
 
+// Adding cors to external service access the api
+$app->middleware([
+    App\Http\Middleware\CorsMiddleware::class
+ ]);
+
 /*
 |--------------------------------------------------------------------------
 | Register Middleware
