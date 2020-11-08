@@ -32,14 +32,6 @@ $ cd database
 $ touch database.sqlite
 ```
 
-**:three: Create the database file.**
-
-```
-$ cd database
-
-$ touch database.sqlite
-```
-
 **:four: Connect and create all table in database file.**
 
 ```
